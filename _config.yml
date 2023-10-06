@@ -5,7 +5,7 @@ title: SALAAMI LAW FIRM
 author: SALAAMI LAW FIRM
 description: > 
   SALAAMI LAW FIRM. LEGAL HELP.
-baseurl: ""
+baseurl: "http://www.salaamifirm.com"
 
 plugins:
   - jekyll-feed
