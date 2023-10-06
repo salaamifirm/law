@@ -17,13 +17,13 @@ favicon: /assets/ico/favicon.ico
 # social media
 twitter_username: salaamifirm # # your twitter handle
 github_username:  salaamifirm # your github username
-linkedin: saragong # the part after ("https://www.linkedin.com/in/...")
+# linkedin: salaamifirm # the part after ("https://www.linkedin.com/in/...")
 # facebook_salaamifirm: <-- your facebook username (the part after "https://www.facebook.com/...")
 # google_analytics: <-- your google analytics Tracking ID
 
 # By declaring these variables, you can include a button that links to an external website or to media.
-about_button: https://github.com/saragong/hello # the link
-about_button_label: get hello # the label on the button
+about_button:  # the link
+about_button_label: # the label on the button
 
 # optional portfolio section ------------------------------------------
 
@@ -42,11 +42,9 @@ cta_button_label: contact # the label on the button
 
 ---			
 [//]: # SALAAMI LAW FIRM is passionate about helping small businesses and consumers.
-### why **hello**?  
 
-### **hello** has a simple goal: to make GitHub Pages accessible to everyone.  
   
-SALAAMI LAW FIRM is in the process of being relaunched soon.
+SALAAMI LAW FIRM is in the process of being relaunched soon!
   
 
 The default layout of **hello** is a streamlined single page with three major customizable sections: a required "about" section, an optional portfolio, and an optional CTA. Using [Liquid](https://shopify.github.io/liquid/) variables declared by in the config and index files, **hello** offers an easy-to-use design where all customizations necessary for a basic personal website can be written in [Markdown](https://www.markdownguide.org/basic-syntax/).  
