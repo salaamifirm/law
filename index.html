@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salaami Law Firm | Civil Litigation in San Diego</title>
+<meta name="description" content="Salaami Law Firm in San Diego handles business law, business formation, construction disputes, contract and fraud litigation, consumer law, real property, trusts and estates, and elder law.">
+<link rel="canonical" href="https://www.salaamifirm.com/">
+<meta property="og:title" content="Salaami Law Firm">
+<meta property="og:description" content="Civil litigation for businesses and individuals in San Diego.">
+<meta property="og:url" content="https://www.salaamifirm.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14213a;
+    --ink-soft: #3a4560;
+    --paper: #f7f5f0;
+    --card: #ffffff;
+    --line: #e2ddd2;
+    --accent: #9a7b4f;
+    --muted: #6b7183;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--accent);
+  }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(247,245,240,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { text-decoration: none; display: flex; flex-direction: column; line-height: 1.1; }
+  .brand .name { font-size: 26px; }
+  .brand .tag { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+  .nav ul { list-style: none; display: flex; gap: 32px; align-items: center; }
+  .nav a { text-decoration: none; font-size: 15px; color: var(--ink-soft); font-weight: 500; }
+  .nav a:hover { color: var(--ink); }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 500; font-size: 15px;
+    padding: 12px 22px; border-radius: 2px; transition: background .2s, color .2s;
+  }
+  .btn-dark { background: var(--ink); color: #fff !important; }
+  .btn-dark:hover { background: #22325a; }
+  .btn-line { border: 1px solid var(--ink); color: var(--ink); }
+  .btn-line:hover { background: var(--ink); color: #fff; }
+
+  /* Hero */
+  .hero {
+    padding: 150px 0 140px; color: #fff;
+    background:
+      linear-gradient(100deg, rgba(14,23,42,0.92) 0%, rgba(14,23,42,0.72) 50%, rgba(14,23,42,0.35) 100%),
+      url("https://images.unsplash.com/photo-1603725117928-6f09697f34aa?auto=format&fit=crop&w=2400&q=70") center/cover no-repeat;
+  }
+  .hero h1 { font-size: clamp(44px, 7vw, 76px); line-height: 1.04; max-width: 820px; margin: 18px 0 26px; }
+  .hero p { font-size: 19px; color: #d5dae6; max-width: 600px; }
+  .hero .btn-dark { background: #fff; color: var(--ink) !important; }
+  .hero .btn-dark:hover { background: #e9e4d8; }
+  .hero .btn-line { border-color: rgba(255,255,255,0.7); color: #fff; }
+  .hero .btn-line:hover { background: #fff; color: var(--ink); }
+  .hero .actions { margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .rule { width: 56px; height: 2px; background: var(--accent); }
+
+  /* Sections */
+  section { padding: 100px 0; }
+  .section-head { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; margin-bottom: 56px; }
+  .section-head h2 { font-size: clamp(34px, 4.5vw, 46px); line-height: 1.1; margin-top: 12px; }
+  .section-head p { color: var(--ink-soft); align-self: end; }
+
+  .areas { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .area { padding: 40px 36px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); }
+  .area .num { font-size: 13px; color: var(--accent); font-weight: 600; letter-spacing: .1em; }
+  .area h3 { font-size: 28px; margin: 10px 0 10px; }
+  .area p { color: var(--ink-soft); font-size: 16px; }
+  .more { margin-top: 28px; color: var(--ink-soft); }
+  .more a { color: var(--accent); font-weight: 500; }
+  @media (max-width: 1000px) { .areas { grid-template-columns: repeat(2, 1fr); } }
+
+  .dark {
+    color: #e9ecf3;
+    background:
+      linear-gradient(rgba(14,23,42,0.90), rgba(14,23,42,0.90)),
+      url("https://images.unsplash.com/photo-1719947688696-31ffb21b5d5e?auto=format&fit=crop&w=2400&q=70") center/cover no-repeat;
+  }
+  .dark .section-head p, .dark .pillar p { color: #b8bfd0; }
+  .dark .eyebrow { color: #c9a874; }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  .pillar { border-top: 1px solid rgba(255,255,255,0.18); padding-top: 24px; }
+  .pillar h3 { font-size: 26px; margin-bottom: 10px; color: #fff; }
+
+  .attorney { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; }
+  .monogram {
+    aspect-ratio: 4/5; background: var(--card); border: 1px solid var(--line);
+    display: grid; place-items: center; font-size: 120px; color: var(--ink);
+  }
+  .attorney h2 { font-size: clamp(34px, 4.5vw, 46px); margin: 12px 0 6px; line-height: 1.1; }
+  .attorney .role { color: var(--muted); margin-bottom: 26px; }
+  .attorney p + p { margin-top: 16px; }
+  .attorney p { color: var(--ink-soft); }
+
+  .contact-card {
+    background: var(--card); border: 1px solid var(--line);
+    padding: 64px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center;
+  }
+  .contact-card h2 { font-size: clamp(32px, 4.5vw, 44px); line-height: 1.1; margin: 12px 0 16px; }
+  .contact-card p { color: var(--ink-soft); }
+  .contact-list { list-style: none; display: grid; gap: 18px; }
+  .contact-list .label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .contact-list a, .contact-list span { font-size: 18px; font-weight: 500; text-decoration: none; }
+  .contact-list a:hover { text-decoration: underline; }
+
+  footer { border-top: 1px solid var(--line); padding: 40px 0 56px; font-size: 13px; color: var(--muted); }
+  footer .row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 18px; }
+  footer .disclaimer { max-width: 860px; line-height: 1.6; }
+
+  @media (max-width: 820px) {
+    body { font-size: 16px; }
+    .nav ul li:not(:last-child) { display: none; }
+    .hero { padding: 80px 0 72px; }
+    section { padding: 72px 0; }
+    .section-head, .attorney, .contact-card { grid-template-columns: 1fr; gap: 24px; }
+    .areas { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr; gap: 32px; }
+    .contact-card { padding: 36px 24px; }
+    .monogram { max-width: 220px; font-size: 80px; }
+    .area { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="name serif">Salaami Law Firm</span>
+      <span class="tag">Attorneys at Law · San Diego</span>
+    </a>
+    <ul>
+      <li><a href="#practice">Practice</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#attorney">Attorney</a></li>
+      <li><a class="btn btn-dark" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="rule"></div>
+      <h1 class="serif">Trusted counsel for businesses, families, and individuals.</h1>
+      <p>Salaami Law Firm advises and represents clients in business, property, consumer, and estate matters throughout San Diego County, from planning and prevention through trial.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="#contact">Discuss your matter</a>
+        <a class="btn btn-line" href="#practice">Practice areas</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="practice">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Practice Areas</div>
+          <h2 class="serif">What we handle</h2>
+        </div>
+        <p>Litigation and counsel for businesses, property owners, families, and individuals across California.</p>
+      </div>
+      <div class="areas">
+        <div class="area">
+          <div class="num">01</div>
+          <h3 class="serif">Business Law</h3>
+          <p>Contracts, partnership and shareholder issues, and day-to-day legal guidance for small and mid-sized businesses.</p>
+        </div>
+        <div class="area">
+          <div class="num">02</div>
+          <h3 class="serif">Business Formation</h3>
+          <p>Choosing and forming the right entity, operating agreements, and setting up a company on solid footing.</p>
+        </div>
+        <div class="area">
+          <div class="num">03</div>
+          <h3 class="serif">Construction Disputes</h3>
+          <p>Defect claims, payment disputes, delays, and contractor and design liability for owners and businesses.</p>
+        </div>
+        <div class="area">
+          <div class="num">04</div>
+          <h3 class="serif">Breach of Contract</h3>
+          <p>Enforcing and defending commercial and residential agreements when performance breaks down.</p>
+        </div>
+        <div class="area">
+          <div class="num">05</div>
+          <h3 class="serif">Fraud &amp; Misrepresentation</h3>
+          <p>Claims arising from false statements and concealment in business and real estate dealings.</p>
+        </div>
+        <div class="area">
+          <div class="num">06</div>
+          <h3 class="serif">Consumer Law</h3>
+          <p>Protecting individuals in disputes with businesses, contractors, sellers, and service providers.</p>
+        </div>
+        <div class="area">
+          <div class="num">07</div>
+          <h3 class="serif">Real Property Law</h3>
+          <p>Landlord-tenant matters, real estate transactions, and disputes over property rights.</p>
+        </div>
+        <div class="area">
+          <div class="num">08</div>
+          <h3 class="serif">Trusts &amp; Estates</h3>
+          <p>Planning documents, trust administration, and disputes involving trusts and estates.</p>
+        </div>
+        <div class="area">
+          <div class="num">09</div>
+          <h3 class="serif">Elder Law</h3>
+          <p>Helping seniors and their families protect assets, plan ahead, and resolve disputes.</p>
+        </div>
+      </div>
+      <p class="more">We also handle a variety of other civil matters. If you don&rsquo;t see your issue listed, <a href="#contact">get in touch</a>.</p>
+    </div>
+  </section>
+
+  <section id="approach" class="dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Approach</div>
+          <h2 class="serif">How we work</h2>
+        </div>
+        <p>Every matter receives direct attorney attention, a clear strategy, and honest advice about risk and cost.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3 class="serif">Direct access</h3>
+          <p>You work with your attorney, not a rotating team. Calls and emails are answered by the person handling your case.</p>
+        </div>
+        <div class="pillar">
+          <h3 class="serif">Prepared for trial</h3>
+          <p>Cases are built from day one as if they will be tried, which is often the strongest path to a favorable resolution.</p>
+        </div>
+        <div class="pillar">
+          <h3 class="serif">Practical outcomes</h3>
+          <p>Litigation is a business decision. We weigh settlement, mediation, and trial against your actual goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="attorney">
+    <div class="wrap attorney">
+      <div class="monogram serif" aria-hidden="true">S</div>
+      <div>
+        <div class="eyebrow">The Attorney</div>
+        <h2 class="serif">Ehson “Ace” Salaami</h2>
+        <div class="role">Principal Attorney</div>
+        <p>Ace Salaami is a California attorney who represents businesses and individuals in business, construction, contract, fraud, consumer, property, and estate matters. An experienced civil litigator, he appears primarily in San Diego Superior Court and handles cases through every stage, including discovery, mediation, and trial.</p>
+        <p>He founded Salaami Law Firm to give businesses and individuals the kind of hands-on, trial-ready representation usually reserved for much larger clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact-card">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2 class="serif">Tell us about your matter.</h2>
+          <p>Call or email with a brief description of your situation and any upcoming deadlines. Please do not send confidential information until an attorney-client relationship has been established.</p>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <div class="label">Email</div>
+            <a href="mailto:salaamifirm@gmail.com">salaamifirm@gmail.com</a>
+          </li>
+          <li>
+            <div class="label">Phone</div>
+            <a href="tel:+16192724242">(619) 272-4242</a>
+          </li>
+          <li>
+            <div class="label">Offices</div>
+            <span>Offices in San Diego</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© <span id="yr">2026</span> Salaami Law Firm. All rights reserved.</span>
+      <span>Attorney Advertising</span>
+    </div>
+    <p class="disclaimer">The information on this website is for general informational purposes only and is not legal advice. Viewing this site or contacting the firm does not create an attorney-client relationship. Prior results do not guarantee a similar outcome.</p>
+    <p class="disclaimer" style="margin-top:10px">Photos: Hakan Toker and Tomasz Zielonka on Unsplash.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
