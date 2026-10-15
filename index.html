@@ -120,14 +120,33 @@
 
   .contact-card {
     background: var(--card); border: 1px solid var(--line);
-    padding: 64px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center;
+    padding: 64px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start;
   }
   .contact-card h2 { font-size: clamp(32px, 4.5vw, 44px); line-height: 1.1; margin: 12px 0 16px; }
   .contact-card p { color: var(--ink-soft); }
-  .contact-list { list-style: none; display: grid; gap: 18px; }
+  .contact-list { list-style: none; display: grid; gap: 18px; margin-top: 32px; }
   .contact-list .label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
   .contact-list a, .contact-list span { font-size: 18px; font-weight: 500; text-decoration: none; }
   .contact-list a:hover { text-decoration: underline; }
+  .form { display: grid; gap: 18px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .field { display: grid; gap: 6px; }
+  .field span { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+  .field em { font-style: normal; color: var(--muted); font-weight: 400; }
+  .field input, .field select, .field textarea {
+    font: inherit; font-size: 16px; color: var(--ink); background: var(--paper);
+    border: 1px solid var(--line); border-radius: 2px; padding: 12px 14px; width: 100%;
+  }
+  .field textarea { resize: vertical; min-height: 120px; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+  .ack { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+  .ack input { margin-top: 4px; accent-color: var(--ink); width: 16px; height: 16px; flex-shrink: 0; }
+  .form button { justify-self: start; border: 0; cursor: pointer; font-family: inherit; }
+  .form button[disabled] { opacity: .6; cursor: default; }
+  .form-status { font-size: 15px; min-height: 1em; }
+  .form-status.ok { color: #2f6b3a; }
+  .form-status.err { color: #a03a2c; }
+  .hp { position: absolute; left: -9999px; }
 
   footer { border-top: 1px solid var(--line); padding: 40px 0 56px; font-size: 13px; color: var(--muted); }
   footer .row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 18px; }
@@ -142,6 +161,7 @@
     .areas { grid-template-columns: 1fr; }
     .pillars { grid-template-columns: 1fr; gap: 32px; }
     .contact-card { padding: 36px 24px; }
+    .field-row { grid-template-columns: 1fr; }
     .monogram { max-width: 220px; font-size: 80px; }
     .area { padding: 32px 24px; }
   }
@@ -282,22 +302,70 @@
         <div>
           <div class="eyebrow">Contact</div>
           <h2 class="serif">Tell us about your matter.</h2>
-          <p>Call or email with a brief description of your situation and any upcoming deadlines. Please do not send confidential information until an attorney-client relationship has been established.</p>
+          <p>Send a brief description of your situation and any upcoming deadlines, and we will follow up. You can also reach the firm directly.</p>
+          <ul class="contact-list">
+            <li>
+              <div class="label">Phone</div>
+              <a href="tel:+16192724242">(619) 272-4242</a>
+            </li>
+            <li>
+              <div class="label">Email</div>
+              <a href="mailto:salaamifirm@gmail.com">salaamifirm@gmail.com</a>
+            </li>
+            <li>
+              <div class="label">Offices</div>
+              <span>Offices in San Diego</span>
+            </li>
+          </ul>
         </div>
-        <ul class="contact-list">
-          <li>
-            <div class="label">Email</div>
-            <a href="mailto:salaamifirm@gmail.com">salaamifirm@gmail.com</a>
-          </li>
-          <li>
-            <div class="label">Phone</div>
-            <a href="tel:+16192724242">(619) 272-4242</a>
-          </li>
-          <li>
-            <div class="label">Offices</div>
-            <span>Offices in San Diego</span>
-          </li>
-        </ul>
+
+        <form id="contact-form" class="form" novalidate>
+          <input type="hidden" name="access_key" value="14425883-b090-4b1b-aa4f-ea4159301641">
+          <input type="hidden" name="subject" value="New inquiry from salaamifirm.com">
+          <input type="hidden" name="from_name" value="Salaami Law Firm Website">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="field-row">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>Phone <em>(optional)</em></span>
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+          </div>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span>Practice area</span>
+            <select name="practice_area" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Business Law</option>
+              <option>Business Formation</option>
+              <option>Construction Disputes</option>
+              <option>Breach of Contract</option>
+              <option>Fraud &amp; Misrepresentation</option>
+              <option>Consumer Law</option>
+              <option>Real Property Law</option>
+              <option>Trusts &amp; Estates</option>
+              <option>Elder Law</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Briefly describe your matter</span>
+            <textarea name="message" rows="5" required placeholder="General description and any upcoming deadlines. Please do not include confidential details."></textarea>
+          </label>
+          <label class="ack">
+            <input type="checkbox" name="acknowledgment" value="Acknowledged: no attorney-client relationship; no confidential information" required>
+            <span>I understand that submitting this form does not create an attorney-client relationship, and I have not included confidential information.</span>
+          </label>
+          <button type="submit" class="btn btn-dark">Send inquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -314,6 +382,38 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function () {
+  var form = document.getElementById('contact-form');
+  var status = form.querySelector('.form-status');
+  var btn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.className = 'form-status';
+    if (!form.checkValidity()) {
+      status.textContent = 'Please complete the required fields and the acknowledgment.';
+      status.classList.add('err');
+      form.reportValidity();
+      return;
+    }
+    btn.disabled = true; btn.textContent = 'Sending\u2026'; status.textContent = '';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    }).then(function (r) { return r.json(); }).then(function (data) {
+      if (data.success) {
+        form.reset();
+        status.textContent = 'Thank you. Your inquiry has been sent, and we will be in touch soon.';
+        status.classList.add('ok');
+      } else { throw new Error(data.message || 'Submission failed'); }
+    }).catch(function () {
+      status.textContent = 'Sorry, something went wrong. Please call (619) 272-4242 or email salaamifirm@gmail.com.';
+      status.classList.add('err');
+    }).finally(function () { btn.disabled = false; btn.textContent = 'Send inquiry'; });
+  });
+})();
+</script>
 </body>
 </html>
